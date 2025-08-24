@@ -61,3 +61,27 @@ LCTL_T(KC_CAPS),  KC_A,    KC_R,    KC_S,    KC_T,    KC_D,                     
                                           XXXXXXX, _______, XXXXXXX,    XXXXXXX, _______, XXXXXXX
                                       //`--------------------------'  `--------------------------'
   )};
+
+void set_capslock_led(bool on);
+
+void keyboard_post_init_user(void) {
+    rgblight_enable_noeeprom();
+    rgblight_sethsv_noeeprom(0, 0, 0);
+}
+
+bool led_update_user(led_t led_state) {
+    if (led_state.caps_lock) {
+        set_capslock_led(true);
+    } else {
+        set_capslock_led(false);
+    }
+    return true;
+}
+
+void set_capslock_led(bool on) {
+    if (on) {
+        rgblight_setrgb_range(255, 255, 255, 0, 6);
+    } else {
+        rgblight_setrgb_range(0, 0, 0, 0, 6);
+    }
+}
