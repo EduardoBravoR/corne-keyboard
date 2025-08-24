@@ -1,12 +1,12 @@
 BOOTLOADER = atmel-dfu
-OLED_ENABLE     = no
+OLED_ENABLE = no
 RGBLIGHT_ENABLE = no
 RGB_MATRIX_ENABLE = no
 NKRO_ENABLE = no
-MOUSEKEY_ENABLE = no    # Mouse keys
-UNICODE_ENABLE = no		# Disable Unicode (special characters emojis and symbols)
+MOUSEKEY_ENABLE = no
+UNICODE_ENABLE = no
 CONSOLE_ENABLE = no
 COMMAND_ENABLE = no
-EXTRAKEY_ENABLE = yes	# Allows media keys (music, brigthnesss and volume)
+EXTRAKEY_ENABLE = yes
 SWAP_HANDS_ENABLE = no
-LTO_ENABLE      = yes
+LTO_ENABLE = yes
